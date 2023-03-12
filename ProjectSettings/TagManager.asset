@@ -6,6 +6,8 @@ TagManager:
   tags:
   - item
   - Ground
+  - "\u041A\u0443\u0444\u0441\u0440"
+  - Reach
   layers:
   - Default
   - TransparentFX
