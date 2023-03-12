@@ -305,7 +305,7 @@ public class PlayerMovment : MonoBehaviour
       }
      
       if(_grounded)
-         _rb.AddForce(Vector3.down * 120f, ForceMode.Force);
+         _rb.AddForce(Vector3.down * 150f, ForceMode.Force);
 
       // in air
       else if(!_grounded)
