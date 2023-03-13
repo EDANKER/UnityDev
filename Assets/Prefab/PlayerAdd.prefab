@@ -127,14 +127,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837196341377086188}
-  m_LocalRotation: {x: 0.01360544, y: 0.98929936, z: -0.14197008, w: -0.03076181}
-  m_LocalPosition: {x: 0.00015, y: -0.0001, z: -0.00379}
-  m_LocalScale: {x: 0.009999995, y: 0.0100000035, z: 0.009999998}
+  m_LocalRotation: {x: -0.18955615, y: -0.03006941, z: -0.015074375, w: -0.98129356}
+  m_LocalPosition: {x: -0.015000109, y: 1.5987767, z: 0.33564317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1837196342243893491}
-  m_Father: {fileID: 3667424155923711718}
-  m_RootOrder: 13
+  m_Father: {fileID: 6630913388992087887}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 18.427, y: -3.597, z: 0.034}
 --- !u!20 &1837196341377086187
 Camera:
@@ -1390,6 +1390,22 @@ CapsuleCollider:
   m_Height: 1.4559115
   m_Direction: 1
   m_Center: {x: 0, y: 0.7459423, z: 0}
+--- !u!114 &1837196341317455625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664815681838757212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RigLayers:
+  - m_Rig: {fileID: 1837196342338772504}
+    m_Active: 1
+  m_Effectors: []
 --- !u!114 &1837196341317455628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,22 +1439,6 @@ MonoBehaviour:
   maxSlopeAngel: 0
   orientation: {fileID: 1837196341828956785}
   State: 0
---- !u!114 &1837196341317455625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7664815681838757212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RigLayers:
-  - m_Rig: {fileID: 1837196342338772504}
-    m_Active: 1
-  m_Effectors: []
 --- !u!114 &1837196341317455638
 MonoBehaviour:
   m_ObjectHideFlags: 0
