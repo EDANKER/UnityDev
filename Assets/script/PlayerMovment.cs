@@ -11,6 +11,7 @@ public class PlayerMovment : MonoBehaviour
    private float moveSpeed;
    public float walkSpeed;
    public float sprintSpeed;
+  
 
    public float groundDrag;
 
