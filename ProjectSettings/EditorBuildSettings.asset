@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/trash/trash.unity
     guid: f12d309316219ff408c42084c2e74c90
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/PrefabCelacter.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
