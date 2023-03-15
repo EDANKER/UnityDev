@@ -187,6 +187,16 @@ public class PlayerMovment : MonoBehaviour
 
    private void StateHandler()
    {
+      if (Input.GetKeyDown(KeyCode.Space))
+      {
+         _animator.SetBool("Jump", true);
+      }
+
+      else
+      {
+         _animator.SetBool("Jumo", false);
+      }
+      
       if (Input.GetKey(KeyCode.W))
       {
          _animator.SetBool("Run", true);
