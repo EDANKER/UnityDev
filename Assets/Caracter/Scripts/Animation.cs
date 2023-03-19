@@ -29,6 +29,12 @@ public class Animation : MonoBehaviour
         Vector3 movment = new Vector3(horizontalInput, 0f, verticalInput);
         _rigidbody.velocity = movment;
 
+        if (Input.GetKeyUp(CtrlD))
+        {
+            _animator.SetBool("CtrlD", false);
+            
+        }
+
         if (Input.GetKey(KeyCode.W))
         {
             _animator.SetBool("Run", true);
@@ -94,11 +100,19 @@ public class Animation : MonoBehaviour
                 _animator.SetBool("CtrlD", true);
 
             }
+            else
+            {
+                _animator.SetBool("CtrlD", false);
+            }
 
             if (Input.GetKey(CtrlA))
             {
                 _animator.SetBool("CtrlA", true);
 
+            }
+            else
+            {
+                _animator.SetBool("CtrlA", false);
             }
 
             if (Input.GetKey(CtrlW))
