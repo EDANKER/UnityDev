@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - item
-  - Ground
-  - "\u041A\u0443\u0444\u0441\u0440"
-  - Reach
+  - Car
+  - ResetDriftCollision
   layers:
   - Default
   - TransparentFX
@@ -17,12 +15,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - whatisGround
-  - whatIsGround
-  - 
-  - 
+  - Car
+  - Road
+  - BrakingGround
+  - Metal
+  - Rubber
+  - FinishZone
   - 
   - 
   - 
