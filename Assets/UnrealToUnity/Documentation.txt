@@ -1,0 +1,51 @@
+
+Documentation :
+
+This product is highly experimental, if you have any problems, please e-mail me at relativegames7@gmail.com !
+First watch the video tutorial here : https://www.youtube.com/watch?v=thGvNU1WH58
+
+
+How to use :
+1) Create a new C++ based project ( not a blueprint based one) and copy this folder into /YourProject/Plugins/ so that this is a valid path :
+ /YourProject/Plugins/UnrealToUnity/UnrealToUnity.uplugin
+
+2) Add to this project all the assets you want to export, for example add the starter content to your project and open Minimal_Default
+3) Click on the new UnityToUnreal button to get a submenu with 2 options ( https://static-2.gumroad.com/res/gumroad/6820826904760/asset_previews/69e3c18e6a93fd94a7d6bf702baec914/retina/MenuOption.png )
+- Export as OBJ : no vertex colors, no lights, no LODs or collision shapes but it's very fast and materials are always accurate.
+- Export as SingleFBX: includes vertex colors, lights, collisions, LODs but messes some materials sometimes and may take a really long time.
+For a 2M poly scene it can take > 10minutes. It also can't save individual meshes as assets.
+
+If you choose the SingleFBXScene, aprompt will pop-up at a certain poin to ask you for the FBX export options. Don't change the path of the output as a lot of things will fail if you do so.
+There is no progress bar currently, sorry and it may take a while for big scenes like the ElementalDemo because it needs to recompile ALL shaders with debug information so the HLSL
+source can be extracted.
+The exporter exports an entire project to C:\UnrealToUnity\ for use with Unity 2017 and up.
+
+4) Open the newly created project with Unity
+5) In the root assets folder Asset\ there is either a FBX file or a Scene.unity file. For the FBX drag this into a new scene and delete default unity scene objects : MainCamera and DirectionalLight ( this
+interfeers with unreal's default camera and lights )
+
+Optional :
+-if you want to reexport the same scene or a new scene make sure you delete the currently exported UnrealToUnity folder. You can iterate on export if you need to, just don't
+add/remove assets (meshes/materials).
+
+ConsoleOptions
+utu.ExportLODs - Export all Lods, default is 1
+utu.ExportVertexColors - Export VertexColors, default is 1
+
+Known Issues :
+-It's not compatible with any scriptable render pipeline !
+-It may crash during export if you don't have enough RAM, check your memory at the point of the crash dialog to figure this out. In situations like these just try to export again
+as much of the memory increase is due to texture export which doesn't happen on subsequent tries if the texture is already exported.
+-sometimes you may get an error on export depending on where the project is. Some users have had problems with projects located in their user documents folder or C:\Program Files
+-On certain PCs the .NET Framework SDK 4.6.0 is not installed. This is a requirement apparently.
+-ERROR: Windows SDK must be installed in order to build this target. - this is a requirement for UE4 C++ based projects. You must install all UE4 prerequisites and first make sure you can compile
+ C++ based projects like the Kite Demo for example.
+- Double check that this file resides exactly here /YourProject/Plugins/UnrealToUnity/UnrealToUnity.uplugin
+- Do not name your test Project UnrealToUnity as Unreal can't load 2 modules with the same name (your game + plugin).
+- if your system language is anything other than english you may get errors such as "error C2039: 'Names': 'FMaterialPreshaderData'?? ?????? ?ƴմϴ?." Try
+changing your system language to english and try again. Also, do not use non-ASCII characters for the project name or assets.
+
+Support
+
+-if you have an error while trying to compile the plugin, there's a file at ProjectName/Saved/Logs/ProjectName.log . Send me this file at relativegames7@gmail.com
+-if in unity you have white objects which stem from shader compilation errors send me screenshots with those errors at relativegames7@gmail.com
